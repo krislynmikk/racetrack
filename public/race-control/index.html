@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Race Control</title>
+  <link rel="stylesheet" href="/shared/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Race Control</h1>
+    <p>Safety official panel</p>
+
+    <div class="panel">
+      <h2>Controls</h2>
+      <div class="form-row">
+        <button id="startRaceBtn" class="btn-blue">Start Race</button>
+        <button id="safeBtn" class="btn-green">Safe</button>
+        <button id="hazardBtn" class="btn-yellow">Hazard</button>
+        <button id="dangerBtn" class="btn-red">Danger</button>
+        <button id="finishBtn">Finish</button>
+        <button id="endSessionBtn">End Session</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Status</h2>
+      <p><strong>Race Mode:</strong> <span id="raceModeText">-</span></p>
+      <p><strong>Remaining Time:</strong> <span id="remainingTimeText">0</span>s</p>
+    </div>
+
+    <div class="panel">
+      <h2>Current Session</h2>
+      <div id="currentSessionOutput">No active race.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Upcoming Sessions</h2>
+      <div id="upcomingSessionsOutput">No upcoming sessions.</div>
+    </div>
+  </div>
+
+  <script src="/shared/auth.js"></script>
+  
+    <script>
+    createAuth('safety').then(() => {
+        const script = document.createElement('script');
+        script.src = '/race-control/script.js';
+        document.body.appendChild(script);
+    });
+    </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/race-control/script.js"></script>
+</body>
+</html>

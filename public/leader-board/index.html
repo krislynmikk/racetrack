@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leader Board</title>
+  <link rel="stylesheet" href="/shared/styles.css" />
+</head>
+<body>
+  <button id="fsBtn" class="btn-blue fs-btn">Fullscreen</button>
+  <div class="container">
+    <h1>Leader Board</h1>
+
+    <div class="panel">
+      <p><strong>Mode:</strong> <span id="mode">-</span></p>
+      <p><strong>Time left:</strong> <span id="time">0</span>s</p>
+    </div>
+
+    <div class="panel">
+      <h2>Results</h2>
+      <div id="tableContainer">Waiting for race...</div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/leader-board/script.js"></script>
+  <script src="/shared/fullscreen.js"></script>
+    <script>
+    enableFullscreen('fsBtn');
+    </script>
+</body>
+</html>

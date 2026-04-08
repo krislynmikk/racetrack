@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next Race</title>
+  <link rel="stylesheet" href="/shared/styles.css" />
+</head>
+<body>
+  <button id="fsBtn" class="btn-blue fs-btn">Fullscreen</button>
+  <div class="container">
+    <h1>Next Race</h1>
+
+    <div class="panel">
+      <div id="message"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Drivers</h2>
+      <div id="driversContainer">No data</div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/next-race/script.js"></script>
+  <script src="/shared/fullscreen.js"></script>
+  <script src="/leader-board/script.js"></script>
+
+    <script>
+    enableFullscreen('fsBtn');
+    </script>
+</body>
+</html>

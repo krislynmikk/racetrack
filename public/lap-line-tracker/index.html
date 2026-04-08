@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lap Tracker</title>
+  <link rel="stylesheet" href="/shared/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Lap Tracker</h1>
+    <p>Tap car when it crosses the line</p>
+
+    <div class="panel">
+      <h2>Status</h2>
+      <p><strong>Race Mode:</strong> <span id="raceMode">-</span></p>
+    </div>
+
+    <div class="panel">
+      <h2>Cars</h2>
+      <div id="buttonsContainer">No active race</div>
+    </div>
+  </div>
+
+  <script src="/shared/auth.js"></script>
+
+    <script>
+    createAuth('observer').then(() => {
+        const script = document.createElement('script');
+        script.src = '/lap-line-tracker/script.js';
+        document.body.appendChild(script);
+    });
+    </script>
+    
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/lap-line-tracker/script.js"></script>
+</body>
+</html>

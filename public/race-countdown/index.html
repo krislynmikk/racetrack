@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Race Countdown</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    .timer {
+      font-size: 140px;
+      font-weight: bold;
+      letter-spacing: 4px;
+    }
+
+    #fsBtn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      border: none;
+      padding: 10px 14px;
+      font-weight: bold;
+      cursor: pointer;
+      background: #1f6feb;
+      color: white;
+    }
+
+    #fsBtn:hover {
+      background: #388bfd;
+    }
+  </style>
+</head>
+<body>
+  <button id="fsBtn">Fullscreen</button>
+
+  <div class="timer" id="timer">00:00</div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/shared/fullscreen.js"></script>
+  <script src="/race-countdown/script.js"></script>
+  <script>
+    enableFullscreen('fsBtn');
+  </script>
+</body>
+</html>
