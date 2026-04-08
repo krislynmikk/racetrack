@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Race Countdown</title>
+  <link rel="stylesheet" href="/shared/styles.css" />
   <style>
     body {
       margin: 0;
@@ -25,9 +26,9 @@
 
     #fsBtn {
       position: fixed;
-      top: 10px;
+      top: 70px;
       left: 10px;
-      z-index: 1000;
+      z-index: 1100;
       border: none;
       padding: 10px 14px;
       font-weight: bold;
@@ -47,9 +48,11 @@
   <div class="timer" id="timer">00:00</div>
 
   <script src="/socket.io/socket.io.js"></script>
+  <script src="/shared/navbar.js"></script>
   <script src="/shared/fullscreen.js"></script>
   <script src="/race-countdown/script.js"></script>
   <script>
+    createNavbar();
     enableFullscreen('fsBtn');
   </script>
 </body>

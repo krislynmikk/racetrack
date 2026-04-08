@@ -41,7 +41,7 @@
   </div>
 
   <script src="/shared/auth.js"></script>
-  
+
     <script>
     createAuth('safety').then(() => {
         const script = document.createElement('script');
@@ -50,7 +50,11 @@
     });
     </script>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/race-control/script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/shared/navbar.js"></script>
+    <script src="/race-control/script.js"></script>
+    <script>
+    createNavbar();
+    </script>  
 </body>
 </html>
