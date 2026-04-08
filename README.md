@@ -34,17 +34,17 @@ The system is built using Node.js, Express and Socket.IO.
 
 ## Installation
 
-1. Install dependencies (insert in terminal):
+1. Install dependencies:
 
     npm install
 
-2. Set access keys (insert in terminal):
+2. Set access keys:
 
     export RECEPTIONIST_KEY=1
     export SAFETY_KEY=2
     export OBSERVER_KEY=3
 
-3. Start the server (insert in terminal):
+3. Start the server:
 
     npm start
 
