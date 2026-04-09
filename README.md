@@ -91,6 +91,14 @@ Open:
 
 ---
 
+## Bonus Features
+
+- Fullscreen toggle (enter and exit fullscreen)
+- Global navigation bar for easier demo usage
+- Improved input handling (no typing interruptions)
+- Modular backend structure (state, services, sockets)
+- Enhanced user experience and UI consistency
+
 ## Technologies
 
 - Node.js
